@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cold Culture — Demo</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+  }
+
+  /* TOP BAR */
+  .top-bar {
+    background: #C7000B;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 0;
+    letter-spacing: 0.5px;
+  }
+
+  /* MAIN NAV */
+  header {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+  }
+
+  .nav-left a,
+  .nav-right a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: #111;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .nav-left a.active {
+    color: #C7000B;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  /* SECOND NAV */
+  .nav-secondary {
+    padding: 10px 40px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 22px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    overflow-x: auto;
+  }
+
+  .nav-secondary a {
+    text-decoration: none;
+    color: #111;
+    white-space: nowrap;
+  }
+
+  .nav-secondary a.active {
+    color: #C7000B;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    height: 80vh;
+    background: url("/mnt/data/560be0d3-36b9-479e-aad0-f357ba73fe11.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-overlay {
+    text-align: center;
+    color: white;
+  }
+
+  .hero-overlay h1 {
+    font-size: 90px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    text-transform: lowercase;
+  }
+
+  .hero-overlay h2 {
+    font-size: 52px;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+
+  .hero-overlay .brand {
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .hero-button {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    padding: 12px 26px;
+    border: 1px solid white;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+  }
+
+  .hero-button:hover {
+    background: white;
+    color: #111;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+  FREE SHIPPING OVER 85€
+</div>
+
+<header>
+  <div class="nav-main">
+    <div class="nav-left">
+      <a href="#">SHOP</a>
+      <a href="#" class="active">SPECIAL PRICES</a>
+      <a href="#">COLLECTIONS</a>
+      <a href="#">STORES</a>
+      <a href="#">FAQS</a>
+    </div>
+
+    <div class="logo">coldculture™</div>
+
+    <div class="nav-right">
+      <a href="#">COLD TOUR</a>
+      <a href="#">COUNTRY</a>
+      <a href="#">☆</a>
+      <a href="#">👤</a>
+      <a href="#">🔍</a>
+      <a href="#">👜</a>
+    </div>
+  </div>
+
+  <nav class="nav-secondary">
+    <a href="#" class="active">SPECIAL PRICES</a>
+    <a href="#">NEW ARRIVALS</a>
+    <a href="#">BEST SELLERS</a>
+    <a href="#">HOODIES</a>
+    <a href="#">ZIPS</a>
+    <a href="#">KNITWEAR</a>
+    <a href="#">OUTERWEAR</a>
+    <a href="#">PANTS</a>
+    <a href="#">LONGSLEEVE</a>
+    <a href="#">TEES</a>
+    <a href="#">CREWNECKS</a>
+    <a href="#">SWEATPANTS</a>
+    <a href="#">BAGS | CARDHOLDERS</a>
+    <a href="#">SNEAKERS</a>
+    <a href="#">ACCESSORIES</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>special prices</h1>
+    <h2>up to 40%</h2>
+    <div class="brand">coldculture™</div>
+  </div>
+
+  <a href="#" class="hero-button">SHOP NOW</a>
+</section>
+
+</body>
+</html>
