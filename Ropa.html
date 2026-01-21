@@ -14,49 +14,55 @@
         }
 
         .Inicio {
-            background-color: rgb(0, 0, 110);
-            width: 99%;
-            height: 12%;
-            margin-left: 0.5%;
+    background-color: rgb(0, 0, 110);
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center; /* centra todo verticalmente */
+}
 
-            display: flex;
-            align-items: center;
-        }
+.vinculos {
+    color: white;
+    display: flex;
+    align-items: center; /* centra Inicio, Contacto, etc */
+    list-style: none;
+    gap: 20px;
+    margin-left: auto; /* los manda a la derecha */
+    padding-right: 20px;
+}
 
-        .Logo {
-            height: 45%;
-            width: 5%;
-            margin-left: 10px;
-        }
+.vinculos li {
+    cursor: pointer;
+}
 
-        .vinculos {
-            color: white;
-            display: flex;
-            margin-left: 75%;
-            padding-left: 1%;
-            list-style: none;
-            gap: 10%;
-        }
+.Logo { 
+    height: 45%; 
+    width: 5%;  
+}
 
-        li {
-            display: inline-block;
+.button {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
 
-        }
+.button img {
+    height: 100%;
+    width: 100%;
+}
 
-        .video {
-            width: 49%;
-            margin-left: 0.5%;
-            height: 10%;
-        }
+h1{
+    text-align: center;
+}
 
-        .menu {
-            height: 65%;
-            width: 15%;
-            margin-left: 10px;
-        }
-        button{
-             border-radius: 90%;
-        }
+.producto{
+    height: 0%;
+}
     </style>
 
 </head>
@@ -69,13 +75,21 @@
                 <li>Inicio</li>
                 <li>Contacto</li>
                 <li>Rebajas</li>
-                <button><img src="img/menu.png" alt="menu"></button>
+                <button class="button"><img class="button" src="img/menu.png" alt="menu"></button>
             </ul>
         </nav>
+        <figure>
+            <img class="productos" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg" alt="camiseta basic">
+        </figure>
     </header>
     <div>
-        <h3></h3>
+        <h1>La marca que hará historia</h1>
     </div>
+    <footer class="Inicio">
+<ul>
+    <li>Redes sociales</li>
+</ul>
+    </footer>
 </body>
 
 </html>
