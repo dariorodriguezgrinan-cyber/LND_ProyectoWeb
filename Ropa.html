@@ -14,81 +14,211 @@
         }
 
         .Inicio {
-    background-color: rgb(0, 0, 110);
-    width: 100%;
-    height: 12%;
-    display: flex;
-    align-items: center; /* centra todo verticalmente */
+            background-color: rgb(0, 0, 110);
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .vinculos {
+            color: white;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+            margin-left: auto;
+            padding-right: 20px;
+        }
+
+        .vinculos li {
+            cursor: pointer;
+        }
+
+        .Logo {
+            height: 45%;
+            width: 5%;
+        }
+
+        .button {
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+        }
+
+        .button img {
+            height: 100%;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .producto {
+            width: 100%;
+            height: 40%;
+            display: block;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            color: rgb(255, 255, 255);
+        }
+
+        .divisionde1 {
+            margin-left: 5%;
+        }
+
+        .divisionde2 {
+            margin-left: 29%;
+            display: flex;
+            align-items: center;
+        }
+
+        .divisionde3 {
+            margin-left: 30%;
+        }
+
+        video {
+            height: 5%;
+            width: 10%;
+        }
+
+        .separacion {
+            width: 20%;
+            text-align: center;
+        }
+
+        .alineacion {
+            display: inline-flex;
+        }
+
+        p {
+            text-align: center;
+        }
+/* Tablets */
+        @media (max-width: 1024px) {
+    .Logo {
+        height: 8%;
+    }
+
+    .vinculos {
+        gap: 15px;
+        padding-right: 10px;
+        flex-wrap: wrap;
+    }
+
+    .producto {
+        width: 70%;
+        height: auto;
+    }
+
+    .separacion {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    footer ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .divisionde1, .divisionde2, .divisionde3 {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 
-.vinculos {
-    color: white;
-    display: flex;
-    align-items: center; /* centra Inicio, Contacto, etc */
-    list-style: none;
-    gap: 20px;
-    margin-left: auto; /* los manda a la derecha */
-    padding-right: 20px;
+/* Smartphones */
+@media (max-width: 768px) {
+    .Inicio {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .vinculos {
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .Logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .producto {
+        width: 90%;
+        height: auto;
+    }
+
+    .separacion {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divisionde1, .divisionde2, .divisionde3 {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
 }
 
-.vinculos li {
-    cursor: pointer;
-}
-
-.Logo { 
-    height: 45%; 
-    width: 5%;  
-}
-
-.button {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: none;
-}
-
-.button img {
-    height: 100%;
-    width: 100%;
-}
-
-h1{
-    text-align: center;
-}
-
-.producto{
-    height: 0%;
-}
     </style>
-
 </head>
 
 <body>
     <header>
-        <nav class="Inicio">
-            <img class="Logo" src="img/Letter R for Business Logo negro.png" alt="Logo">
+        <nav class="Inicio"> <img class="Logo" src="img/Letter R for Business Logo negro.png" alt="Logo">
             <ul class="vinculos">
                 <li>Inicio</li>
                 <li>Contacto</li>
-                <li>Rebajas</li>
-                <button class="button"><img class="button" src="img/menu.png" alt="menu"></button>
+                <li>Rebajas</li> <button class="button"><img class="button" src="img/menu.png" alt="menu"></button>
             </ul>
         </nav>
-        <figure>
-            <img class="productos" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg" alt="camiseta basic">
-        </figure>
     </header>
     <div>
         <h1>La marca que hará historia</h1>
     </div>
+    <br>
+    <hr>
+    <h1>Productos destacados</h1>
+    <figure class="separacion">
+        <img class="producto" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg"
+            alt="camiseta basic">
+        <figcaption>
+            <p>Camiseta básica</p>
+            <p>23,99€</p>
+        </figcaption>
+    </figure>
+
+
     <footer class="Inicio">
-<ul>
-    <li>Redes sociales</li>
-</ul>
+        <ul class="divisionde1">
+            <li>Política de envíos</li>
+        </ul>
+        <ul class="divisionde2">
+            <li>est.2026 &copy; Derechos de autor</li>
+        </ul>
+        <ul class="divisionde3">
+            <li>Redes sociales</li>
+        </ul>
     </footer>
 </body>
 
