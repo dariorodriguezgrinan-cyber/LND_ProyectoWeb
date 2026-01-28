@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/Letter R for Business Logo.png">
-    <title>Rbrand</title>
+    <title>BADLUV</title>
     <style>
         * {
             padding: 0;
@@ -13,11 +13,17 @@
             box-sizing: border-box;
         }
 
+
         .Inicio {
-            background-color: rgb(0, 0, 110);
+            background-color: rgb(218, 0, 0);
             width: 100%;
             display: flex;
             align-items: center;
+
+
+            justify-content: space-between;
+            padding: 1% 2%;
+            position: relative;
         }
 
         .vinculos {
@@ -35,8 +41,8 @@
         }
 
         .Logo {
-            height: 45%;
             width: 5%;
+            height: auto;
         }
 
         .button {
@@ -58,6 +64,8 @@
 
         h1 {
             text-align: center;
+            margin: 2% 0;
+
         }
 
         .producto {
@@ -67,31 +75,24 @@
             display: block;
         }
 
-        footer ul {
-            list-style: none;
+         .producto2 {
+            width: 80%;
+            height: 40%;
+            margin-left: 10%;
+            display: block;
         }
 
-        footer li {
+        footer p {
             color: rgb(255, 255, 255);
         }
 
-        .divisionde1 {
-            margin-left: 5%;
-        }
-
-        .divisionde2 {
-            margin-left: 32%;
-            display: flex;
-            align-items: center;
-        }
-
+        .divisionde1,
+        .divisionde2,
         .divisionde3 {
-            margin-left: 34%;
-        }
-
-        video {
-            height: 5%;
-            width: 10%;
+            width: 33.33%;
+            text-align: center;
+            color: white;
+            margin: 0;
         }
 
         .separacion {
@@ -109,26 +110,45 @@
 
         .nombre {
             color: white;
-            margin-left: 40.5%;
+            margin: 0;
+            position: absolute;
+            left: 49%;
+            transform: translateX(-50%);
         }
 
         .Final {
-            background-color: rgb(0, 0, 110);
+            background-color: rgb(218, 0, 0);
             width: 100%;
             display: flex;
             align-items: center;
-            padding: 1%;
-
+            justify-content: space-between;
+            padding: 2%;
         }
 
         h1 {
             text-align: center;
         }
 
-        .redes{
-            width: 5%;
-            height: 5%;
+        .redes {
+            width: 4%;
+            height: auto;
         }
+
+        .productos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        video{
+             width: 80%;
+            height: 40%;
+            margin-left: 10%;
+            display: block;
+        }
+    
 
         /* Tablets */
         @media (max-width: 1024px) {
@@ -147,9 +167,17 @@
                 height: auto;
             }
 
+            .productos {
+                display: flex;
+                justify-content: center;
+                gap: 5%;
+                width: 100%;
+                margin-top: 2%;
+            }
+
             .separacion {
-                width: 80%;
-                margin: 0 auto;
+                width: 20%;
+                text-align: center;
             }
 
             footer ul {
@@ -170,77 +198,82 @@
         /* Smartphones */
         @media (max-width: 768px) {
 
-    .Inicio {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        position: relative;
-    }
+            .Inicio {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                position: relative;
+            }
 
-    .Logo {
-        width: 45px;
-        height: auto;
-        margin: 0;
-    }
+            .Logo {
+                width: 45px;
+                height: auto;
+                margin: 0;
+            }
 
-    .nombre {
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        font-size: 22px;
-    }
+            .nombre {
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                font-size: 22px;
+            }
 
-    .vinculos {
-        display: none;
-    }
+            .vinculos {
+                display: none;
+            }
 
-    .button {
-        display: flex;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-    }
+            .button {
+                display: flex;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
 
-    .button img {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
+            .button img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
 
-    .producto {
-        width: 90%;
-        height: auto;
-        margin: 0 auto;
-    }
+            .producto {
+                width: 90%;
+                height: auto;
+                margin: 0 auto;
+            }
 
-    .separacion {
-        width: 100%;
-        text-align: center;
-    }
+            .separacion {
+                width: 80%;
+            }
 
-    footer ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
+            .productos {
+                flex-direction: column;
+                align-items: center;
+                gap: 4%;
+            }
 
-    .divisionde1,
-    .divisionde2,
-    .divisionde3 {
-        margin: 0;
-        text-align: center;
-    }
-}
+            footer ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .divisionde1,
+            .divisionde2,
+            .divisionde3 {
+                margin: 0;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <nav class="Inicio"> <img class="Logo" src="img/Letter R for Business Logo negro.png" alt="Logo">
-            <h1 class="nombre">RBRAND</h1>
+            <h1 class="nombre">BADLUV</h1>
             <ul class="vinculos">
                 <li>Inicio</li>
                 <li>Contacto</li>
@@ -254,35 +287,40 @@
     <br>
     <hr>
     <h1>Productos destacados</h1>
-    <figure class="separacion">
-        <img class="producto" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg"
-            alt="camiseta basic">
-        <figcaption>
-            <p>Camiseta básica</p>
-            <p>23,99€</p>
-        </figcaption>
-    </figure>
-    <figure class="separacion">
-        <img src="" alt="">
-        <figcaption>
+    <div class="productos">
+        <figure class="separacion">
+            <img class="producto" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg"
+                alt="camiseta basic">
+            <figcaption>
+                <p>Camiseta básica</p>
+                <p>19,99€</p>
+                <video class="video-producto" autoplay muted loop playsinline>
+            <source src="img/0115.mp4" type="video/mp4">
+        </video>
+            </figcaption>
+        </figure>
 
-        </figcaption>
-    </figure>
+        <figure class="separacion">
+            <img class="producto2" src="img/Parte delantera.png" alt="corazon roto">
+            <figcaption>
+                <p>Heart broken</p>
+                <p>24,99€</p>
+            </figcaption>
+        </figure>
+    </div>
 
 
     <footer class="Final">
-        <ul class="divisionde1">
-            <li>Política de envíos</li>
-        </ul>
-        <ul class="divisionde2">
-            <li>est.2026 &copy; Derechos de autor</li>
-        </ul>
-        <ul class="divisionde3">
-            <li>Redes sociales</li>
-            <img class="redes" src="img/Instagram_logo_2022.svg" alt="Intagram">
+        <p class="divisionde1">Política de envíos</p>
+
+        <p class="divisionde2">est.2026 © Derechos de autor</p>
+
+        <div class="divisionde3">
+            Redes sociales
+            <img class="redes" src="img/Instagram_logo_2022.svg" alt="Instagram">
             <img src="" alt="">
             <img src="" alt="">
-        </ul>
+        </div>
     </footer>
 </body>
 
