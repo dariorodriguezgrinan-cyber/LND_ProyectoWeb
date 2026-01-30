@@ -167,29 +167,65 @@
             height: 60vh;
         }
 
+        .carousel-auto {
+            width: 100%;
+            overflow: hidden;
+            padding-top: 6.38%;
+        }
+
+        .track {
+            display: flex;
+            width: max-content;
+            animation: scroll 60s linear infinite;
+        }
+
+        .track img {
+            width: 15vw;
+            height: 10vh;
+            object-fit: cover;
+            /* llena el recuadro recortando */
+            object-position: center 60%;
+            /* enfoca la parte superior de la imagen */
+            flex-shrink: 0;
+
+            background: black;
+            padding-left: 1%;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
 
         /* Tablets */
         @media (max-width: 1024px) {
             .Logo {
-                height: 8%;
+                width: 8vw;
+                height: auto;
             }
 
             .vinculos {
-                gap: 15px;
-                padding-right: 10px;
+                gap: 1.5em;
+                padding-right: 2%;
                 flex-wrap: wrap;
             }
 
-            .producto {
+            .producto,
+            .producto2,
+            .producto3 {
                 width: 70%;
                 height: auto;
             }
 
             .productos {
-                display: flex;
                 justify-content: center;
                 gap: 5%;
-                width: 100%;
                 margin-top: 2%;
             }
 
@@ -206,83 +242,70 @@
             .divisionde1,
             .divisionde2,
             .divisionde3 {
-                margin-left: 0;
-                margin-right: 0;
+                margin: 0 0 1em 0;
                 text-align: center;
-                margin-bottom: 10px;
             }
         }
+
 
         /* Smartphones */
         @media (max-width: 768px) {
 
-            .Inicio {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px;
-                position: relative;
-            }
+             .Inicio {
+        padding: 1em 2%;
+    }
 
-            .Logo {
-                width: 45px;
-                height: auto;
-                margin: 0;
-            }
+    .Logo {
+        width: 12vw;
+        height: auto;
+    }
 
-            .nombre {
-                width: 100%;
-                text-align: center;
-                margin: 0;
-                font-size: 22px;
-            }
+    .nombre {
+        width: 100%;
+        text-align: center;
+        font-size: 5vw;
+        margin: 0;
+    }
 
-            .vinculos {
-                display: none;
-            }
+    .vinculos {
+        display: none;
+    }
 
-            .button {
-                display: flex;
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
+    .button {
+        display: flex;
+        position: absolute;
+        right: 2%;
+        top: 1em;
+    }
 
-            .button img {
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
+    .producto, .producto2, .producto3 {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
 
-            .producto {
-                width: 90%;
-                height: auto;
-                margin: 0 auto;
-            }
+    .separacion {
+        width: 80%;
+    }
 
-            .separacion {
-                width: 80%;
-            }
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        gap: 4%;
+    }
 
-            .productos {
-                flex-direction: column;
-                align-items: center;
-                gap: 4%;
-            }
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
 
-            footer ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-            }
-
-            .divisionde1,
-            .divisionde2,
-            .divisionde3 {
-                margin: 0;
-                text-align: center;
+    .divisionde1,
+    .divisionde2,
+    .divisionde3 {
+        margin: 0;
+        text-align: center;
             }
         }
     </style>
@@ -336,6 +359,25 @@
                 <img class="producto3" src="img/Trasera zip.png" alt="Chaqueta zip">
             </figcaption>
         </figure>
+    </div>
+    <div class="carousel-auto">
+        <div class="track">
+            <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="elementos de la marca">
+            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting">
+            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="">
+            <img src="img/a6a6e6ae517c1503a3a413e3f79f9cf2.jpg" alt="">
+            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="">
+            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="">
+            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
+
+            <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="">
+            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting">
+            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="">
+            <img src="img/a6a6e6ae517c1503a3a413e3f79f9cf2.jpg" alt="">
+            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="">
+            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="">
+            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
+        </div>
     </div>
 
 
