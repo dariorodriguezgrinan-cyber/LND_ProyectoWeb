@@ -183,9 +183,7 @@
             width: 15vw;
             height: 10vh;
             object-fit: cover;
-            /* llena el recuadro recortando */
             object-position: center 60%;
-            /* enfoca la parte superior de la imagen */
             flex-shrink: 0;
 
             background: black;
@@ -200,6 +198,39 @@
             100% {
                 transform: translateX(-50%);
             }
+        }
+
+        .historia-container {
+            display: flex;
+            align-items: center;
+            gap: 4%;
+            width: 90%;
+            margin: 4% auto;
+        }
+
+        .historia-container h1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2%;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+
+        .Historia {
+            width: 35%;
+            border-radius: 10px;
+        }
+
+        .historia-container figcaption {
+            width: 55%;
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: center;
+            color: #333;
+        }
+
+        .historia-container.reverse {
+            flex-direction: row-reverse;
         }
 
 
@@ -374,7 +405,7 @@
             </figcaption>
         </figure>
 
-         <figure class="separacion">
+        <figure class="separacion">
             <img class="producto2" src="img/Camiseta blanca basica.jpg" alt="corazon roto">
             <figcaption>
                 <p>Heart broken T</p>
@@ -384,6 +415,66 @@
         </figure>
 
     </div>
+    <aside>
+        <figure class="historia-container">
+            <h1>Nuestra historia</h1>
+            <img class="Historia" src="img/Mind.jpg" alt="Mind">
+            <figcaption class="Textos">
+                Todo comenzó con una idea simple pero poderosa: crear ropa que diga algo sin tener que hablar. En un
+                mundo saturado de tendencias rápidas y copias sin alma, nació nuestra marca como una respuesta a quienes
+                buscan identidad, actitud y autenticidad en lo que visten.
+                <br>
+                Empezamos desde cero, con bocetos hechos de madrugada, conversaciones llenas de sueños y una obsesión
+                clara: no hacer ropa por hacerla, sino diseñar piezas que representen a personas reales, con historias
+                reales. Cada prenda nace de la calle, de la cultura, del arte y de las emociones que nos mueven día a
+                día.
+                <br>
+                Hoy, la marca está creciendo paso a paso, construyéndose con una comunidad que cree en lo mismo que
+                nosotros: vestirse no es seguir una moda, es expresar quién eres. Estamos perfeccionando cada detalle
+                —desde los materiales hasta el diseño— apostando por calidad, comodidad y estilo atemporal. No buscamos
+                ser los más grandes, buscamos ser los más genuinos.
+                <br>
+                Nuestro objetivo es claro: convertirnos en una marca que acompañe a las personas en su camino, que
+                inspire seguridad, carácter y libertad. Queremos que cada vez que alguien use nuestras prendas sienta
+                que pertenece a algo más grande: una mentalidad, una actitud, una forma de ver el mundo.
+                <br>
+                Esto no es solo ropa.
+                Es una declaración.
+                Y apenas estamos comenzando.
+        </figure>
+    </aside>
+    <aside>
+        <figure class="historia-container reverse">
+            <h1>Historia del creador</h1>
+            <img class="Historia" src="img/Creador.jpg" alt="Creador">
+            <figcaption class="Textos">
+                Esta marca empezó en un momento en el que no tenía todo claro.
+                Lo que sí sabía era que no me sentía representado por lo que veía. Iba a tiendas, veía ropa bien hecha,
+                pero vacía. Nada hablaba de mí, de mi proceso, de mis ideas ni de mis ganas de crear algo propio.
+                <br>
+                La marca nació primero como una pregunta:
+                ¿y si intento hacerlo a mi manera?
+                <br>
+                No empecé sabiendo de moda, empecé aprendiendo. Vi errores antes que aciertos. Probé proveedores que no
+                funcionaron, diseños que tuve que descartar y decisiones que me costaron dinero y tiempo. Hubo momentos
+                de bloqueo creativo y otros en los que la cabeza iba más rápido que mis posibilidades reales.
+                <br>
+                Muchas veces trabajé en esto cuando nadie lo veía: noches largas, dudas constantes y la presión de estar
+                construyendo algo sin garantías. Lo más complicado no fue lo técnico, fue confiar en mí mismo cuando
+                todavía no había resultados.
+                <br>
+                Esta marca es el reflejo de ese proceso. No busca perfección, busca verdad. Cada prenda representa una
+                etapa, una idea que sobrevivió a las dudas y a los “todavía no”. No está pensada para todos, está
+                pensada para quienes entienden lo que es empezar desde abajo y seguir aun sin aplausos.
+                <br>
+                Hoy sigo aprendiendo. Sigo ajustando, mejorando y soñando en grande.
+                Y si estás leyendo esto, quiero que sepas algo: no solo estás comprando ropa, estás apoyando una
+                historia que se está escribiendo en tiempo real.
+                <br>
+                Gracias por ser parte del comienzo.
+            </figcaption>
+        </figure>
+    </aside>
     <div class="carousel-auto">
         <div class="track">
             <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="elementos de la marca">
@@ -403,8 +494,6 @@
             <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
         </div>
     </div>
-
-
     <footer class="Final">
         <p class="divisionde1">Política de envíos</p>
 
