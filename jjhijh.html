@@ -1,194 +1,399 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Cold Culture — Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Letter R for Business Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>BADLUV | La marca que hará historia</title>
+    <style>
+        /* 1. RESET Y BASE */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+        body {
+            padding-top: 110px;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
 
-  body {
-    background: #fff;
-    color: #111;
-  }
+        h1 {
+            text-align: center;
+            margin: 2% 0;
+        }
 
-  /* TOP BAR */
-  .top-bar {
-    background: #C7000B;
-    color: white;
-    text-align: center;
-    font-size: 12px;
-    padding: 8px 0;
-    letter-spacing: 0.5px;
-  }
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
 
-  /* MAIN NAV */
-  header {
-    border-bottom: 1px solid #e5e5e5;
-  }
+        /* 2. NAVEGACIÓN */
+        .Inicio {
+            background-color: rgb(218, 0, 0);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 2%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
 
-  .nav-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 40px;
-  }
+        .Logo {
+            width: 60px;
+            height: auto;
+            border-radius: 10%;
+        }
 
-  .nav-left a,
-  .nav-right a {
-    margin-right: 25px;
-    text-decoration: none;
-    color: #111;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
+        .nombre {
+            color: white;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            font-size: 1.5rem;
+        }
 
-  .nav-left a.active {
-    color: #C7000B;
-  }
+        .vinculos {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            transition: max-height 0.35s ease, opacity 0.3s ease;
+        }
 
-  .logo {
-    font-weight: bold;
-    font-size: 22px;
-    letter-spacing: 1px;
-  }
+        .vinculos li {
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-  /* SECOND NAV */
-  .nav-secondary {
-    padding: 10px 40px;
-    border-top: 1px solid #eee;
-    display: flex;
-    gap: 22px;
-    font-size: 11px;
-    letter-spacing: 1px;
-    overflow-x: auto;
-  }
+        .button {
+            display: none;
+            color: white;
+            font-size: 22px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
 
-  .nav-secondary a {
-    text-decoration: none;
-    color: #111;
-    white-space: nowrap;
-  }
+        /* 3. GRILLA DE PRODUCTOS */
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            padding: 20px;
+        }
 
-  .nav-secondary a.active {
-    color: #C7000B;
-  }
+        .separacion {
+            width: 300px;
+            text-align: center;
+        }
 
-  /* HERO */
-  .hero {
-    position: relative;
-    height: 80vh;
-    background: url("/mnt/data/560be0d3-36b9-479e-aad0-f357ba73fe11.png") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+        .product-card {
+            width: 100%;
+            margin-bottom: 15px;
+        }
 
-  .hero-overlay {
-    text-align: center;
-    color: white;
-  }
+        .product-img-box {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 10px;
+        }
 
-  .hero-overlay h1 {
-    font-size: 90px;
-    font-weight: 300;
-    letter-spacing: -2px;
-    text-transform: lowercase;
-  }
+        .product-img-box img, 
+        .product-img-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
 
-  .hero-overlay h2 {
-    font-size: 52px;
-    font-weight: 300;
-    margin-top: 10px;
-  }
+        .img-back, .product-img-box video {
+            opacity: 0;
+        }
 
-  .hero-overlay .brand {
-    margin-top: 30px;
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
+        .product-img-box:hover img, 
+        .product-img-box:hover video {
+            transform: scale(1.05);
+        }
 
-  .hero-button {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    padding: 12px 26px;
-    border: 1px solid white;
-    color: white;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-decoration: none;
-  }
+        .product-img-box:hover .img-back,
+        .product-img-box:hover video {
+            opacity: 1;
+        }
 
-  .hero-button:hover {
-    background: white;
-    color: #111;
-  }
-</style>
+        .product-img-box:hover .img-front {
+            opacity: 0;
+        }
+
+        /* 4. SECCIONES DE HISTORIA */
+        .historia-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4%;
+            width: 90%;
+            margin: 4% auto;
+        }
+
+        .historia-container h1 {
+            width: 100%;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+
+        .Historia {
+            width: 40%;
+            border-radius: 10px;
+        }
+
+        .Textos {
+            width: 55%;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* 5. CAROUSEL INFINITO */
+        .carousel-auto {
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .track {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+
+        .track img {
+            height: 150px;
+            width: auto;
+            padding: 0 10px;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* 6. FOOTER */
+        .Final {
+            background-color: rgb(218, 0, 0);
+            color: white;
+            padding: 40px 2%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .Final p, .divisionde3 {
+            flex: 1;
+        }
+
+        .divisionde3 i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* 7. RESPONSIVE */
+        @media (max-width: 1024px) {
+            .Historia, .Textos { width: 100%; text-align: center; }
+            .nombre { position: static; transform: none; }
+            .button { display: block; }
+            
+            .vinculos {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background: rgb(218, 0, 0);
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                padding: 0;
+            }
+
+            .vinculos.show {
+                max-height: 300px;
+                opacity: 1;
+                padding: 20px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .Final { flex-direction: column; gap: 20px; }
+            .separacion { width: 90%; }
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <nav class="Inicio">
+            <img class="Logo" src="img/Logo Rojo.png" alt="Logo">
+            <h1 class="nombre">BADLUV</h1>
 
-<div class="top-bar">
-  FREE SHIPPING OVER 85€
-</div>
+            <button class="button" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-<header>
-  <div class="nav-main">
-    <div class="nav-left">
-      <a href="#">SHOP</a>
-      <a href="#" class="active">SPECIAL PRICES</a>
-      <a href="#">COLLECTIONS</a>
-      <a href="#">STORES</a>
-      <a href="#">FAQS</a>
-    </div>
+            <ul class="vinculos" id="menu">
+                <li>Inicio</li>
+                <li>Rebajas</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="logo">coldculture™</div>
+    <main>
+        <h1>La marca que hará historia</h1>
+        <hr>
 
-    <div class="nav-right">
-      <a href="#">COLD TOUR</a>
-      <a href="#">COUNTRY</a>
-      <a href="#">☆</a>
-      <a href="#">👤</a>
-      <a href="#">🔍</a>
-      <a href="#">👜</a>
-    </div>
-  </div>
+        <h1>Productos destacados</h1>
+        <section class="productos">
+            <figure class="separacion">
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img class="img-front" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg">
+                        <video autoplay muted loop playsinline>
+                            <source src="img/0115.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <figcaption>
+                    <p>Basic tee unisex</p>
+                    <p><strong>19,99€</strong></p>
+                </figcaption>
+            </figure>
 
-  <nav class="nav-secondary">
-    <a href="#" class="active">SPECIAL PRICES</a>
-    <a href="#">NEW ARRIVALS</a>
-    <a href="#">BEST SELLERS</a>
-    <a href="#">HOODIES</a>
-    <a href="#">ZIPS</a>
-    <a href="#">KNITWEAR</a>
-    <a href="#">OUTERWEAR</a>
-    <a href="#">PANTS</a>
-    <a href="#">LONGSLEEVE</a>
-    <a href="#">TEES</a>
-    <a href="#">CREWNECKS</a>
-    <a href="#">SWEATPANTS</a>
-    <a href="#">BAGS | CARDHOLDERS</a>
-    <a href="#">SNEAKERS</a>
-    <a href="#">ACCESSORIES</a>
-  </nav>
-</header>
+            <figure class="separacion">
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img class="img-front" src="img/Parte delantera.png">
+                        <img class="img-back" src="img/Parte Trasera.png">
+                    </div>
+                </div>
+                <figcaption>
+                    <p>Heart broken T</p>
+                    <p><strong>24,99€</strong></p>
+                </figcaption>
+            </figure>
 
-<section class="hero">
-  <div class="hero-overlay">
-    <h1>special prices</h1>
-    <h2>up to 40%</h2>
-    <div class="brand">coldculture™</div>
-  </div>
+            <figure class="separacion">
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img class="img-front" src="img/Delantera Zip.png">
+                        <img class="img-back" src="img/Trasera zip.png">
+                    </div>
+                </div>
+                <figcaption>
+                    <p>LUVCLUB ZIP navy blue</p>
+                    <p><strong>46,99€</strong></p>
+                </figcaption>
+            </figure>
+        </section>
 
-  <a href="#" class="hero-button">SHOP NOW</a>
-</section>
+        <h1>Rebajas</h1>
+        <hr>
+        <section class="productos">
+            <figure class="separacion">
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img class="img-front" src="img/Sudadera gris.png">
+                        <img class="img-back" src="img/Sudadera gris trasera.png">
+                    </div>
+                </div>
+                <figcaption>
+                    <p>Grey hoodie Logo</p>
+                    <p><strong>37,99€</strong></p>
+                </figcaption>
+            </figure>
 
+            <figure class="separacion">
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img class="img-front" src="img/Camiseta blanca basica.jpg">
+                        <img class="img-back" src="img/Camiseta blanca basica trasera.jpg">
+                    </div>
+                </div>
+                <figcaption>
+                    <p>White Tee LuvToAll </p>
+                    <p><strong>21,99€</strong></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <article class="historia-container">
+            <h1>Nuestra historia</h1>
+            <img class="Historia" src="img/Mind.jpg" alt="Mind">
+            <figcaption class="Textos">
+                Todo comenzó con una idea simple pero poderosa... (tu texto aquí)
+            </figcaption>
+        </article>
+
+        <article class="historia-container reverse">
+            <h1>Historia del creador</h1>
+            <img class="Historia" src="img/Creador.jpg" alt="Creador">
+            <figcaption class="Textos">
+                Esta marca empezó en un momento en el que no tenía todo claro... (tu texto aquí)
+            </figcaption>
+        </article>
+
+        <div class="carousel-auto">
+            <div class="track">
+                <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="1">
+                <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="2">
+                <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="3">
+                <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="4">
+                <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="1">
+                <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="2">
+                <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="3">
+                <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="4">
+            </div>
+        </div>
+    </main>
+
+    <footer class="Final">
+        <p>Política de envíos</p>
+        <p>est.2026 © Derechos de autor</p>
+        <div class="divisionde3">
+            Siguenos:
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>

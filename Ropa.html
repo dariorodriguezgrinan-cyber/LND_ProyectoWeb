@@ -14,17 +14,23 @@
             box-sizing: border-box;
         }
 
+        body {
+            padding-top: 90px;
+        }
+
 
         .Inicio {
             background-color: rgb(218, 0, 0);
             width: 100%;
             display: flex;
             align-items: center;
-
-
             justify-content: space-between;
-            padding: 1% 2%;
-            position: relative;
+            padding: 0.5% 1%;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
         }
 
         .vinculos {
@@ -48,14 +54,17 @@
         }
 
         .button {
-            border-radius: 50%;
-            height: 40px;
-            width: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: none;
+            color: white;
+            font-size: 22px;
             background: none;
             border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .vinculos {
+            transition: max-height 0.35s ease, opacity 0.3s ease;
         }
 
         .button img {
@@ -191,6 +200,7 @@
             padding-left: 1%;
         }
 
+
         @keyframes scroll {
             0% {
                 transform: translateX(0);
@@ -291,35 +301,82 @@
             opacity: 0;
         }
 
+        .portadas{
+            width: 100%;
+        }
+
         /* Tablets */
         @media (max-width: 1024px) {
+
+            .Inicio {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                padding: 0 20px;
+                /* Cambiado a px para mayor control */
+                height: 70px;
+                /* Altura fija para evitar saltos */
+            }
+
             .Logo {
-                width: 8vw;
+                width: 60px;
+                /* Tamaño fijo más seguro que vw */
                 height: auto;
+                z-index: 1002;
+            }
+
+            /* Tu botón del HTML original */
+            .button {
+                display: block;
+                position: absolute;
+                right: 2%;
+                z-index: 1002;
+                background: none;
+                border: none;
+                color: white;
+            }
+
+            .nombre {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0;
+                font-size: 1.5rem;
+                z-index: 1001;
+                white-space: nowrap;
+                /* Evita que el nombre se parta */
             }
 
             .vinculos {
-                gap: 1.5em;
-                padding-right: 2%;
-                flex-wrap: wrap;
+                position: absolute;
+                top: 70px;
+                /* Justo debajo del header */
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                background: rgb(218, 0, 0);
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.35s ease, opacity 0.3s ease;
+                padding-right: 0;
+                /* Limpiamos el padding de escritorio */
+                margin-left: 0;
             }
 
-            .producto,
-            .producto2,
-            .producto3 {
-                width: 70%;
-                height: auto;
+            .vinculos.show {
+                max-height: 260px;
+                opacity: 1;
+                padding: 15px 0;
             }
 
+            /* Corrección de productos para tablet */
             .productos {
+                flex-wrap: wrap;
+                /* Para que bajen si no caben */
                 justify-content: center;
-                gap: 5%;
-                margin-top: 2%;
-            }
-
-            .separacion {
-                width: 20%;
-                text-align: center;
+                gap: 20px;
             }
 
             footer ul {
@@ -330,72 +387,85 @@
             .divisionde1,
             .divisionde2,
             .divisionde3 {
-                margin: 0 0 1em 0;
                 text-align: center;
+                margin-bottom: 1em;
+            }
+
+            .nombre {
+                position: absolute;
+                /* Mantener en el centro como en escritorio */
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
+
 
 
         /* Smartphones */
         @media (max-width: 768px) {
 
+
             .Inicio {
-                padding: 1em 2%;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                padding: 0 15px;
+                height: 60px;
             }
 
             .Logo {
-                width: 12vw;
-                height: auto;
+                width: 50px;
             }
 
             .nombre {
-                width: 100%;
-                text-align: center;
-                font-size: 5vw;
-                margin: 0;
-            }
-
-            .vinculos {
-                display: none;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                /* Centrado vertical exacto */
+                transform: translate(-50%, -50%);
+                font-size: 1.2rem;
             }
 
             .button {
-                display: flex;
+                display: block;
                 position: absolute;
-                right: 2%;
-                top: 1em;
+                right: 3%;
+                font-size: 26px;
+            }
+
+            .vinculos {
+                top: 60px;
+                /* Ajustado a la nueva altura del header */
+            }
+
+            /* Productos en una sola columna para móvil */
+            .productos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .separacion {
+                width: 90%;
+                margin-bottom: 30px;
             }
 
             .producto,
             .producto2,
             .producto3 {
-                width: 90%;
-                height: auto;
-                margin: 0 auto;
+                width: 100%;
+                margin-left: 0;
             }
 
-            .separacion {
-                width: 80%;
-            }
-
-            .productos {
+            /* Footer corregido para que no se amontone */
+            .Final {
                 flex-direction: column;
-                align-items: center;
-                gap: 4%;
-            }
-
-            footer ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5em;
+                text-align: center;
+                gap: 15px;
             }
 
             .divisionde1,
             .divisionde2,
             .divisionde3 {
-                margin: 0;
-                text-align: center;
+                width: 100%;
             }
         }
     </style>
@@ -403,17 +473,24 @@
 
 <body>
     <header>
-        <nav class="Inicio"> <img class="Logo" src="img/Logo Rojo.png" alt="Logo">
+        <nav class="Inicio">
+            <img class="Logo" src="img/Logo Rojo.png" alt="Logo">
             <h1 class="nombre">BADLUV</h1>
-            <ul class="vinculos">
+
+            <button class="button" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="vinculos" id="menu">
                 <li>Inicio</li>
+                <li>Rebajas</li>
                 <li>Contacto</li>
-                <li>Rebajas</li> <button class="button"><img class="button" src="img/menu.png" alt="menu"></button>
             </ul>
         </nav>
     </header>
     <div>
         <h1>La marca que hará historia</h1>
+        <img class="portadas" src="img/Shooting.png" alt="shooting">
     </div>
     <br>
     <hr>
@@ -477,6 +554,19 @@
             <figcaption>
                 <p>Grey hoodie Logo</p>
                 <p>37,99€</p>
+            </figcaption>
+        </figure>
+
+        <figure class="separacion">
+            <div class="product-card">
+                <div class="product-img-box">
+                    <img class="img-front" src="img/Camiseta blanca basica.jpg">
+                    <img class="img-back" src="img/Camiseta blanca basica trasera.jpg">
+                </div>
+            </div>
+            <figcaption>
+                <p>White Tee LuvToAll </p>
+                <p>21,99€</p>
             </figcaption>
         </figure>
 
@@ -587,6 +677,12 @@
             <i class="fa-brands fa-tiktok"></i>
         </div>
     </footer>
-</body>
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("menu");
 
-</html>
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+    </script>
+</body>
