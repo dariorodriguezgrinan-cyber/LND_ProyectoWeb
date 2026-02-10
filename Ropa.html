@@ -16,6 +16,7 @@
 
         body {
             padding-top: 105px;
+            background-color: rgba(239, 247, 250, 0.486);
         }
 
 
@@ -301,8 +302,48 @@
             opacity: 0;
         }
 
-        .portadas{
+        .portadas {
             width: 100%;
+        }
+
+        /* Animación de entrada */
+        .historia-container {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+
+        /* Cuando se activa */
+        .historia-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Variantes izquierda / derecha */
+        .historia-container.slide-left {
+            transform: translateX(-80px);
+        }
+
+        .historia-container.slide-right {
+            transform: translateX(80px);
+        }
+
+        .historia-container.visible.slide-left,
+        .historia-container.visible.slide-right {
+            transform: translateX(0);
+        }
+
+        /* Animación extra en imágenes */
+        .Historia {
+            transition: transform 0.6s ease;
+        }
+
+        .historia-container.visible .Historia {
+            transform: scale(1.04);
+        }
+
+        .rojo {
+            color: red;
         }
 
         /* Tablets */
@@ -312,19 +353,19 @@
                 flex-wrap: nowrap;
                 justify-content: space-between;
                 padding: 0 20px;
-                /* Cambiado a px para mayor control */
+
                 height: 70px;
-                /* Altura fija para evitar saltos */
+
             }
 
             .Logo {
                 width: 60px;
-                /* Tamaño fijo más seguro que vw */
+
                 height: auto;
                 z-index: 1002;
             }
 
-            /* Tu botón del HTML original */
+
             .button {
                 display: block;
                 position: absolute;
@@ -343,13 +384,13 @@
                 font-size: 1.5rem;
                 z-index: 1001;
                 white-space: nowrap;
-                /* Evita que el nombre se parta */
+
             }
 
             .vinculos {
                 position: absolute;
                 top: 70px;
-                /* Justo debajo del header */
+
                 left: 0;
                 width: 100%;
                 flex-direction: column;
@@ -361,7 +402,7 @@
                 opacity: 0;
                 transition: max-height 0.35s ease, opacity 0.3s ease;
                 padding-right: 0;
-                /* Limpiamos el padding de escritorio */
+
                 margin-left: 0;
             }
 
@@ -371,10 +412,9 @@
                 padding: 15px 0;
             }
 
-            /* Corrección de productos para tablet */
             .productos {
                 flex-wrap: wrap;
-                /* Para que bajen si no caben */
+
                 justify-content: center;
                 gap: 20px;
             }
@@ -393,7 +433,7 @@
 
             .nombre {
                 position: absolute;
-                /* Mantener en el centro como en escritorio */
+
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -420,7 +460,7 @@
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                /* Centrado vertical exacto */
+
                 transform: translate(-50%, -50%);
                 font-size: 1.2rem;
             }
@@ -434,10 +474,10 @@
 
             .vinculos {
                 top: 60px;
-                /* Ajustado a la nueva altura del header */
+
             }
 
-            /* Productos en una sola columna para móvil */
+
             .productos {
                 flex-direction: column;
                 align-items: center;
@@ -455,7 +495,7 @@
                 margin-left: 0;
             }
 
-            /* Footer corregido para que no se amontone */
+
             .Final {
                 flex-direction: column;
                 text-align: center;
@@ -500,28 +540,27 @@
         <figure class="separacion">
             <div class="product-card">
                 <div class="product-img-box">
-                    <img class="img-front" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg">
-                    <video autoplay muted loop playsinline>
-                        <source src="img/0115.mp4" type="video/mp4">
-                    </video>
+                    <img class="img-front" src="img/Sudadera gris.png">
+                    <img class="img-back" src="img/Sudadera gris trasera.png">
                 </div>
             </div>
             <figcaption>
-                <p>Basic tee unisex</p>
-                <p>19,99€</p>
+                <p>Grey hoodie Logo</p>
+                <p>39,99€</p>
+
             </figcaption>
         </figure>
 
         <figure class="separacion">
             <div class="product-card">
                 <div class="product-img-box">
-                    <img class="img-front" src="img/Parte delantera.png">
-                    <img class="img-back" src="img/Parte Trasera.png">
+                    <img class="img-front" src="img/Camiseta blanca basica.jpg">
+                    <img class="img-back" src="img/Camiseta blanca basica trasera.jpg">
                 </div>
             </div>
             <figcaption>
-                <p>Heart broken T</p>
-                <p>24,99€</p>
+                <p>White Tee LuvToAll </p>
+                <p>27,99€</p>
             </figcaption>
         </figure>
 
@@ -544,49 +583,55 @@
     <hr>
     <br>
     <div class="productos">
+
         <figure class="separacion">
             <div class="product-card">
                 <div class="product-img-box">
-                    <img class="img-front" src="img/Sudadera gris.png">
-                    <img class="img-back" src="img/Sudadera gris trasera.png">
+                    <img class="img-front" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg">
+                    <video autoplay muted loop playsinline>
+                        <source src="img/0115.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
             <figcaption>
-                <p>Grey hoodie Logo</p>
-                <p>37,99€</p>
+                <p>Basic tee unisex</p>
+                <p class="rojo"><s>19,99€</s></p>
+                <p>15,99€</p>
             </figcaption>
         </figure>
 
         <figure class="separacion">
             <div class="product-card">
                 <div class="product-img-box">
-                    <img class="img-front" src="img/Camiseta blanca basica.jpg">
-                    <img class="img-back" src="img/Camiseta blanca basica trasera.jpg">
+                    <img class="img-front" src="img/Parte delantera.png">
+                    <img class="img-back" src="img/Parte Trasera.png">
                 </div>
             </div>
             <figcaption>
-                <p>White Tee LuvToAll </p>
-                <p>21,99€</p>
+                <p>Heart broken T</p>
+                <p class="rojo"><s>27,99€</s></p>
+                <p>15,99€</p>
             </figcaption>
         </figure>
 
         <figure class="separacion">
             <div class="product-card">
                 <div class="product-img-box">
-                    <img class="img-front" src="img/Camiseta blanca basica.jpg">
-                    <img class="img-back" src="img/Camiseta blanca basica trasera.jpg">
+                    <img class="img-front" src="img/gorra roja delantera.png">
+                    <img class="img-back" src="img/gorra roja lado.png">
                 </div>
             </div>
             <figcaption>
-                <p>White Tee LuvToAll </p>
-                <p>21,99€</p>
+                <p>show wings cap</p>
+                <p>30,99€</p>
+                <p class="rojo"><s>20,99€</s></p>
             </figcaption>
         </figure>
 
     </div>
 
     <aside>
-        <figure class="historia-container">
+        <figure class="historia-container slide-left">
             <h1>Nuestra historia</h1>
             <img class="Historia" src="img/Mind.jpg" alt="Mind">
             <figcaption class="Textos">
@@ -600,7 +645,8 @@
                 día.
                 <br>
                 Hoy, la marca está creciendo paso a paso, construyéndose con una comunidad que cree en lo mismo que
-                nosotros: vestirse no es seguir una moda, es expresar quién eres. Estamos perfeccionando cada detalle
+                nosotros: vestirse no es seguir una moda, es expresar quién eres.
+                <br>Estamos perfeccionando cada detalle
                 —desde los materiales hasta el diseño— apostando por calidad, comodidad y estilo atemporal. No buscamos
                 ser los más grandes, buscamos ser los más genuinos.
                 <br>
@@ -614,7 +660,7 @@
         </figure>
     </aside>
     <aside>
-        <figure class="historia-container reverse">
+        <figure class="historia-container reverse slide-right">
             <h1>Historia del creador</h1>
             <img class="Historia" src="img/Creador.jpg" alt="Creador">
             <figcaption class="Textos">
@@ -684,5 +730,20 @@
         btn.addEventListener("click", () => {
             menu.classList.toggle("show");
         });
+
+        const historias = document.querySelectorAll(".historia-container");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, {
+            threshold: 0.25
+        });
+
+        historias.forEach(el => observer.observe(el));
+    </script>
     </script>
 </body>
