@@ -19,7 +19,6 @@
             background-color: rgba(239, 247, 250, 0.486);
         }
 
-
         .Inicio {
             background-color: rgb(218, 0, 0);
             width: 100%;
@@ -27,7 +26,6 @@
             align-items: center;
             justify-content: space-between;
             padding: 0.5% 1%;
-
             position: fixed;
             top: 0;
             left: 0;
@@ -77,7 +75,6 @@
         h1 {
             text-align: center;
             margin: 2% 0;
-
         }
 
         .producto {
@@ -164,7 +161,6 @@
             width: 55%;
             height: 40%;
             margin-left: 1%;
-
         }
 
         figcaption {
@@ -196,11 +192,9 @@
             object-fit: cover;
             object-position: center 60%;
             flex-shrink: 0;
-
             background: black;
             padding-left: 1%;
         }
-
 
         @keyframes scroll {
             0% {
@@ -215,9 +209,7 @@
         .historia-container {
             display: flex;
             align-items: center;
-            gap: 4%;
             width: 90%;
-            margin: 4% auto;
         }
 
         .historia-container h1 {
@@ -244,7 +236,6 @@
         .historia-container.reverse {
             flex-direction: row-reverse;
         }
-
 
         .product-card {
             width: 55%;
@@ -348,23 +339,18 @@
 
         /* Tablets */
         @media (max-width: 1024px) {
-
             .Inicio {
                 flex-wrap: nowrap;
                 justify-content: space-between;
                 padding: 0 20px;
-
                 height: 70px;
-
             }
 
             .Logo {
                 width: 60px;
-
                 height: auto;
                 z-index: 1002;
             }
-
 
             .button {
                 display: block;
@@ -384,13 +370,11 @@
                 font-size: 1.5rem;
                 z-index: 1001;
                 white-space: nowrap;
-
             }
 
             .vinculos {
                 position: absolute;
                 top: 70px;
-
                 left: 0;
                 width: 100%;
                 flex-direction: column;
@@ -402,7 +386,6 @@
                 opacity: 0;
                 transition: max-height 0.35s ease, opacity 0.3s ease;
                 padding-right: 0;
-
                 margin-left: 0;
             }
 
@@ -414,7 +397,6 @@
 
             .productos {
                 flex-wrap: wrap;
-
                 justify-content: center;
                 gap: 20px;
             }
@@ -433,22 +415,16 @@
 
             .nombre {
                 position: absolute;
-
                 left: 50%;
                 transform: translateX(-50%);
             }
         }
 
-
-
         /* Smartphones */
         @media (max-width: 768px) {
-
-
             .Inicio {
                 flex-wrap: nowrap;
                 justify-content: space-between;
-                padding: 0 15px;
                 height: 60px;
             }
 
@@ -460,7 +436,6 @@
                 position: absolute;
                 left: 50%;
                 top: 50%;
-
                 transform: translate(-50%, -50%);
                 font-size: 1.2rem;
             }
@@ -474,9 +449,7 @@
 
             .vinculos {
                 top: 60px;
-
             }
-
 
             .productos {
                 flex-direction: column;
@@ -495,7 +468,6 @@
                 margin-left: 0;
             }
 
-
             .Final {
                 flex-direction: column;
                 text-align: center;
@@ -513,85 +485,63 @@
 
 <body>
     <header>
-        <nav class="Inicio">
-            <img class="Logo" src="img/Logo Rojo.png" alt="Logo">
-            <h1 class="nombre">BADLUV</h1>
-
-            <button class="button" id="menuBtn">
-                <i class="fa-solid fa-bars"></i>
+        <nav class="Inicio"> <img class="Logo" src="img/Logo Rojo.png" alt="Logo">
+            <h1 class="nombre">BADLUV</h1> <button class="button" id="menuBtn"> <i class="fa-solid fa-bars"></i>
             </button>
-
             <ul class="vinculos" id="menu">
-                <li>Inicio</li>
-                <li>Rebajas</li>
+                <li> <a href="#inicio">Inicio</a></li>
+                <li><a href="#rebajas">Rebajas</a></li>
                 <li>Contacto</li>
             </ul>
         </nav>
     </header>
     <div>
-        <h1>La marca que hará historia</h1>
-        <img class="portadas" src="img/Shooting.png" alt="shooting">
-    </div>
-    <br>
+        <h1 id="inicio">La marca que hará historia</h1> <img class="portadas" src="img/Shooting.png" alt="shooting">
+    </div> <br>
     <hr>
-    <h1>Productos destacados</h1>
+    <h1 id="rebajas">Productos destacados</h1>
     <div class="productos">
-
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box">
-                    <img class="img-front" src="img/Sudadera gris.png">
-                    <img class="img-back" src="img/Sudadera gris trasera.png">
-                </div>
+                <div class="product-img-box"> <img class="img-front" src="img/Sudadera gris.png"> <img class="img-back"
+                        src="img/Sudadera gris trasera.png"> </div>
             </div>
             <figcaption>
                 <p>Grey hoodie Logo</p>
                 <p>39,99€</p>
-
             </figcaption>
         </figure>
-
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box">
-                    <img class="img-front" src="img/Camiseta blanca basica.jpg">
-                    <img class="img-back" src="img/Camiseta blanca basica trasera.jpg">
-                </div>
+                <div class="product-img-box"> <img class="img-front" src="img/Camiseta blanca basica.jpg"> <img
+                        class="img-back" src="img/Camiseta blanca basica trasera.jpg"> </div>
             </div>
             <figcaption>
                 <p>White Tee LuvToAll </p>
                 <p>27,99€</p>
             </figcaption>
         </figure>
-
-
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box">
-                    <img class="img-front" src="img/Delantera Zip.png">
-                    <img class="img-back" src="img/Trasera zip.png">
-                </div>
+                <div class="product-img-box"> <img class="img-front" src="img/Delantera Zip.png"> <img class="img-back"
+                        src="img/Trasera zip.png"> </div>
             </div>
             <figcaption>
                 <p>LUVCLUB ZIP navy blue</p>
                 <p>46,99€</p>
             </figcaption>
         </figure>
-
     </div>
     <h1>Rebajas</h1>
-    <hr>
-    <br>
+    <hr> <br>
     <div class="productos">
-
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box">
-                    <img class="img-front" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg">
-                    <video autoplay muted loop playsinline>
+                <div class="product-img-box"> <img class="img-front"
+                        src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg"> <video autoplay
+                        muted loop playsinline>
                         <source src="img/0115.mp4" type="video/mp4">
-                    </video>
-                </div>
+                    </video> </div>
             </div>
             <figcaption>
                 <p>Basic tee unisex</p>
@@ -599,13 +549,10 @@
                 <p>15,99€</p>
             </figcaption>
         </figure>
-
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box">
-                    <img class="img-front" src="img/Parte delantera.png">
-                    <img class="img-back" src="img/Parte Trasera.png">
-                </div>
+                <div class="product-img-box"> <img class="img-front" src="img/Parte delantera.png"> <img
+                        class="img-back" src="img/Parte Trasera.png"> </div>
             </div>
             <figcaption>
                 <p>Heart broken T</p>
@@ -613,13 +560,10 @@
                 <p>15,99€</p>
             </figcaption>
         </figure>
-
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box">
-                    <img class="img-front" src="img/gorra roja delantera.png">
-                    <img class="img-back" src="img/gorra roja lado.png">
-                </div>
+                <div class="product-img-box"> <img class="img-front" src="img/gorra roja delantera.png"> <img
+                        class="img-back" src="img/gorra roja lado.png"> </div>
             </div>
             <figcaption>
                 <p>show wings cap</p>
@@ -627,123 +571,66 @@
                 <p class="rojo"><s>20,99€</s></p>
             </figcaption>
         </figure>
-
     </div>
-
     <aside>
         <figure class="historia-container slide-left">
-            <h1>Nuestra historia</h1>
-            <img class="Historia" src="img/Mind.jpg" alt="Mind">
-            <figcaption class="Textos">
-                Todo comenzó con una idea simple pero poderosa: crear ropa que diga algo sin tener que hablar. En un
-                mundo saturado de tendencias rápidas y copias sin alma, nació nuestra marca como una respuesta a quienes
-                buscan identidad, actitud y autenticidad en lo que visten.
-                <br>
-                Empezamos desde cero, con bocetos hechos de madrugada, conversaciones llenas de sueños y una obsesión
-                clara: no hacer ropa por hacerla, sino diseñar piezas que representen a personas reales, con historias
-                reales. Cada prenda nace de la calle, de la cultura, del arte y de las emociones que nos mueven día a
-                día.
-                <br>
-                Hoy, la marca está creciendo paso a paso, construyéndose con una comunidad que cree en lo mismo que
-                nosotros: vestirse no es seguir una moda, es expresar quién eres.
-                <br>Estamos perfeccionando cada detalle
-                —desde los materiales hasta el diseño— apostando por calidad, comodidad y estilo atemporal. No buscamos
-                ser los más grandes, buscamos ser los más genuinos.
-                <br>
-                Nuestro objetivo es claro: convertirnos en una marca que acompañe a las personas en su camino, que
-                inspire seguridad, carácter y libertad. Queremos que cada vez que alguien use nuestras prendas sienta
-                que pertenece a algo más grande: una mentalidad, una actitud, una forma de ver el mundo.
-                <br>
-                Esto no es solo ropa.
-                Es una declaración.
-                Y apenas estamos comenzando.
+            <h1>Nuestra historia</h1> <img class="Historia" src="img/Mind.jpg" alt="Mind">
+            <figcaption class="Textos"> Todo comenzó con una idea simple pero poderosa: crear ropa que diga algo sin
+                tener que hablar. En un mundo saturado de tendencias rápidas y copias sin alma, nació nuestra marca como
+                una respuesta a quienes buscan identidad, actitud y autenticidad en lo que visten. <br> Empezamos desde
+                cero, con bocetos hechos de madrugada, conversaciones llenas de sueños y una obsesión clara: no hacer
+                ropa por hacerla, sino diseñar piezas que representen a personas reales, con historias reales. Cada
+                prenda nace de la calle, de la cultura, del arte y de las emociones que nos mueven día a día. <br> Hoy,
+                la marca está creciendo paso a paso, construyéndose con una comunidad que cree en lo mismo que nosotros:
+                vestirse no es seguir una moda, es expresar quién eres. <br>Estamos perfeccionando cada detalle —desde
+                los materiales hasta el diseño— apostando por calidad, comodidad y estilo atemporal. No buscamos ser los
+                más grandes, buscamos ser los más genuinos. <br> Nuestro objetivo es claro: convertirnos en una marca
+                que acompañe a las personas en su camino, que inspire seguridad, carácter y libertad. Queremos que cada
+                vez que alguien use nuestras prendas sienta que pertenece a algo más grande: una mentalidad, una
+                actitud, una forma de ver el mundo. <br> Esto no es solo ropa. Es una declaración. Y apenas estamos
+                comenzando.
         </figure>
     </aside>
     <aside>
         <figure class="historia-container reverse slide-right">
-            <h1>Historia del creador</h1>
-            <img class="Historia" src="img/Creador.jpg" alt="Creador">
-            <figcaption class="Textos">
-                Esta marca empezó en un momento en el que no tenía todo claro.
-                Lo que sí sabía era que no me sentía representado por lo que veía. Iba a tiendas, veía ropa bien hecha,
-                pero vacía. Nada hablaba de mí, de mi proceso, de mis ideas ni de mis ganas de crear algo propio.
-                <br>
-                La marca nació primero como una pregunta:
-                ¿Y si intento hacerlo a mi manera?
-                <br>
-                No empecé sabiendo de moda, empecé aprendiendo. Vi errores antes que aciertos. Probé proveedores que no
-                funcionaron, diseños que tuve que descartar y decisiones que me costaron dinero y tiempo. Hubo momentos
-                de bloqueo creativo y otros en los que la cabeza iba más rápido que mis posibilidades reales.
-                <br>
-                Muchas veces trabajé en esto cuando nadie lo veía: noches largas, dudas constantes y la presión de estar
-                construyendo algo sin garantías. Lo más complicado no fue lo técnico, fue confiar en mí mismo cuando
-                todavía no había resultados.
-                <br>
-                Esta marca es el reflejo de ese proceso. No busca perfección, busca verdad. Cada prenda representa una
-                etapa, una idea que sobrevivió a las dudas y a los “todavía no”. No está pensada para todos, está
-                pensada para quienes entienden lo que es empezar desde abajo y seguir aun sin aplausos.
-                <br>
-                Hoy sigo aprendiendo. Sigo ajustando, mejorando y soñando en grande.
-                Y si estás leyendo esto, quiero que sepas algo: no solo estás comprando ropa, estás apoyando una
-                historia que se está escribiendo en tiempo real.
-                <br>
-                Gracias por ser parte del comienzo.
+            <h1>Historia del creador</h1> <img class="Historia" src="img/Creador.jpg" alt="Creador">
+            <figcaption class="Textos"> Esta marca empezó en un momento en el que no tenía todo claro. Lo que sí sabía
+                era que no me sentía representado por lo que veía. Iba a tiendas, veía ropa bien hecha, pero vacía. Nada
+                hablaba de mí, de mi proceso, de mis ideas ni de mis ganas de crear algo propio. <br> No empecé sabiendo
+                de moda, empecé aprendiendo. Vi errores antes que aciertos. Probé proveedores que no funcionaron,
+                diseños que tuve que descartar y decisiones que me costaron dinero y tiempo. <br> Muchas veces trabajé
+                en esto cuando nadie lo veía: noches largas, dudas constantes y la presión de estar construyendo algo
+                sin garantías. Lo más complicado no fue lo técnico, fue confiar en mí mismo cuando todavía no había
+                resultados. <br> Cada prenda representa una etapa, una idea que sobrevivió a las dudas. No está pensada
+                para todos, está pensada para quienes entienden lo que es empezar desde abajo y seguir aun sin aplausos.
+                <br> Y si estás leyendo esto, quiero que sepas algo: no solo estás comprando ropa, estás apoyando una
+                historia que se está escribiendo en tiempo real. <br> Gracias por ser parte del comienzo.
             </figcaption>
         </figure>
     </aside>
     <div class="carousel-auto">
-        <div class="track">
-            <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="elementos de la marca">
-            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting">
-            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="">
-            <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="">
-            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="">
-            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="">
-            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
-
-            <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="">
-            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting">
-            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="">
-            <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="">
-            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="">
-            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="">
-            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
+        <div class="track"> <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="elementos de la marca"> <img
+                src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting"> <img
+                src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt=""> <img
+                src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt=""> <img
+                src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt=""> <img
+                src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt=""> <img
+                src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt=""> <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="">
+            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting"> <img
+                src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt=""> <img
+                src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt=""> <img
+                src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt=""> <img
+                src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt=""> <img
+                src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
         </div>
     </div>
     </div>
     <footer class="Final">
         <p class="divisionde1">Política de envíos</p>
-
         <p class="divisionde2">est.2026 © Derechos de autor</p>
-
-        <div class="divisionde3">
-            Redes sociales
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-tiktok"></i>
-        </div>
+        <div class="divisionde3"> Redes sociales <i class="fa-brands fa-instagram"></i> <i
+                class="fa-brands fa-x-twitter"></i> <i class="fa-brands fa-tiktok"></i> </div>
     </footer>
-    <script>
-        const btn = document.getElementById("menuBtn");
-        const menu = document.getElementById("menu");
-
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("show");
-        });
-
-        const historias = document.querySelectorAll(".historia-container");
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, {
-            threshold: 0.25
-        });
-
-        historias.forEach(el => observer.observe(el));
-    </script>
+    <script> const btn = document.getElementById("menuBtn"); const menu = document.getElementById("menu"); btn.addEventListener("click", () => { menu.classList.toggle("show"); }); const historias = document.querySelectorAll(".historia-container"); const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("visible"); } }); }, { threshold: 0.25 }); historias.forEach(el => observer.observe(el)); </script>
     </script>
 </body>
