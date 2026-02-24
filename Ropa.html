@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/Letter R for Business Logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>BADLUV</title>
     <style>
         * {
@@ -572,6 +573,7 @@
             </figcaption>
         </figure>
     </div>
+    <br>
     <aside>
         <figure class="historia-container slide-left">
             <h1>Nuestra historia</h1> <img class="Historia" src="img/Mind.jpg" alt="Mind">
@@ -591,6 +593,8 @@
                 comenzando.
         </figure>
     </aside>
+    <br>
+    <br>
     <aside>
         <figure class="historia-container reverse slide-right">
             <h1>Historia del creador</h1> <img class="Historia" src="img/Creador.jpg" alt="Creador">
@@ -609,27 +613,32 @@
         </figure>
     </aside>
     <div class="carousel-auto">
-        <div class="track"> <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="elementos de la marca"> <img
-                src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting"> <img
-                src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt=""> <img
-                src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt=""> <img
-                src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt=""> <img
-                src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt=""> <img
-                src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt=""> <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="">
-            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting"> <img
-                src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt=""> <img
-                src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt=""> <img
-                src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt=""> <img
-                src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt=""> <img
-                src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
+        <div class="track">
+            <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="elementos de la marca">
+            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting">
+            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="">
+            <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="">
+            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="">
+            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="">
+            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
+            <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="">
+            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting">
+            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="">
+            <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="">
+            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="">
+            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="">
+            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
         </div>
     </div>
     </div>
     <footer class="Final">
         <p class="divisionde1">Política de envíos</p>
         <p class="divisionde2">est.2026 © Derechos de autor</p>
-        <div class="divisionde3"> Redes sociales <i class="fa-brands fa-instagram"></i> <i
-                class="fa-brands fa-x-twitter"></i> <i class="fa-brands fa-tiktok"></i> </div>
+        <div class="divisionde3">Redes sociales
+            <a href="https://www.instagram.com/badluv.oficial/"> <i class="fa-brands fa-instagram"></i></a>
+            <i class="fa-brands fa-x-twitter"></i>
+            <a href="https://www.tiktok.com/@badluv_oficial?lang=es"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
     </footer>
     <script> const btn = document.getElementById("menuBtn"); const menu = document.getElementById("menu"); btn.addEventListener("click", () => { menu.classList.toggle("show"); }); const historias = document.querySelectorAll(".historia-container"); const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("visible"); } }); }, { threshold: 0.25 }); historias.forEach(el => observer.observe(el)); </script>
     </script>
