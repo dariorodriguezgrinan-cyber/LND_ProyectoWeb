@@ -1,15 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
 
+@keyframes fadeInPage {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     padding-top: 105px;
     background-color: rgba(239, 247, 250, 0.486);
     font-family: "DM Serif Text", serif;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInPage 1s ease forwards;
+}
+
+header{
+    position: fixed;
 }
 
 .Inicio {
@@ -290,20 +306,17 @@ figcaption {
     width: 100%;
 }
 
-/* Animación de entrada */
 .historia-container {
     opacity: 0;
     transform: translateY(60px);
     transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-/* Cuando se activa */
 .historia-container.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Variantes izquierda / derecha */
 .historia-container.slide-left {
     transform: translateX(-80px);
 }
@@ -317,7 +330,6 @@ figcaption {
     transform: translateX(0);
 }
 
-/* Animación extra en imágenes */
 .Historia {
     transition: transform 0.6s ease;
 }
@@ -333,6 +345,14 @@ figcaption {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+.texto-largo {
+    display: inline;
+}
+
+.texto-corto {
+    display: none;
 }
 
 /* Tablets */
@@ -416,7 +436,21 @@ a {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .texto-largo {
+        display: none;
+    }
+
+    .texto-corto {
+        display: inline;
+    }
+
+    .historia-titulo {
+        display: none;
+    }
+
 }
+
 
 /* Smartphones */
 @media (max-width: 768px) {
@@ -476,5 +510,18 @@ a {
     .divisionde2,
     .divisionde3 {
         width: 100%;
+    }
+
+    .historia-titulo {
+        display: none;
+    }
+
+    /* ocultar h1 */
+    .texto-largo {
+        display: none;
+    }
+
+    .texto-corto {
+        display: inline;
     }
 }

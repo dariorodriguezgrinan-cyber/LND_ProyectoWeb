@@ -1,0 +1,81 @@
+  body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #fdf6f0, #f5f5f5);
+            color: #333;
+            padding: 40px 20px;
+            line-height: 1.7;
+        }
+
+        h1 {
+            font-family: 'DM Serif Text', serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #d20000;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-family: 'DM Serif Text', serif;
+            font-size: 1.6rem;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        h2::before {
+            content: "✦";
+            color: #d20000;
+            margin-right: 8px;
+        }
+
+        p, ul {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        a {
+            color: #d20000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #d20000;
+            margin: 30px 0;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Animación de entrada */
+        .politicas {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.4rem; }
+            body { padding: 20px 15px; }
+
+        }
