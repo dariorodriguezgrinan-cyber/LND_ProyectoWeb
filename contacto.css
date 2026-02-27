@@ -2,7 +2,7 @@
       
       body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background: linear-gradient(to bottom, #fdf6f0, #f5f5f5);
             padding: 20px;
             text-align: center;
         }
@@ -61,4 +61,9 @@
 
         button:hover {
             background-color: rgb(218, 0, 0);
+        }
+
+          a {
+            color: #d20000;
+            text-decoration: none;
         }

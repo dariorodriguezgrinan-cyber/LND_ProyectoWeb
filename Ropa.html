@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/Letter R for Business Logo.png">
+    <link rel="icon" href="img/LogoRojo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>BADLUV</title>
@@ -12,8 +12,8 @@
 
 <body>
     <header>
-        <nav class="Inicio"> 
-            <img class="Logo" src="img/Logo Rojo.png" alt="Logo">
+        <nav class="Inicio">
+            <img class="Logo" src="img/LogoRojo.png" alt="Logo">
             <h1 class="nombre">BADLUV</h1> <button class="button" id="menuBtn"> <i class="fa-solid fa-bars"></i>
             </button>
             <ul class="vinculos" id="menu">
@@ -24,15 +24,29 @@
         </nav>
     </header>
     <div>
-        <h1 id="inicio">La marca que hará historia</h1> <img class="portadas" src="img/Shooting.png" alt="shooting">
+        <h1 id="inicio">La marca que hará historia</h1>
+        <br>
+        <div class="slider">
+            <img src="img/Shooting.png" class="slide active" alt="Shooting">
+            <img src="img/Shooting2.png" class="slide" alt="Shooting2">
+            <img src="img/Shooting3.png" class="slide" alt="Shooting3">
+
+            <div class="indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
     </div> <br>
     <hr>
     <h1 id="productos">Productos destacados</h1>
     <div class="productos">
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box"> <img class="img-front" src="img/Sudadera gris.png"> <img class="img-back"
-                        src="img/Sudadera gris trasera.png"> </div>
+                <div class="product-img-box">
+                    <img class="img-front" src="img/SudaderaGris.png" alt="Sudadera gris">
+                    <img class="img-back" src="img/SudaderaGrisTrasera.png" alt="Sudadera gris trasera">
+                </div>
             </div>
             <figcaption>
                 <p>Grey hoodie Logo</p>
@@ -41,8 +55,10 @@
         </figure>
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box"> <img class="img-front" src="img/Camiseta blanca basica.jpg"> <img
-                        class="img-back" src="img/Camiseta blanca basica trasera.jpg"> </div>
+                <div class="product-img-box">
+                    <img class="img-front" src="img/CamisetaBlancaBasica.jpg" alt="Camiseta blanca">
+                    <img class="img-back" src="img/CamisetaBlancaBasicaTrasera.jpg" alt="Camiseta blanca trasera">
+                </div>
             </div>
             <figcaption>
                 <p>White Tee LuvToAll </p>
@@ -51,8 +67,10 @@
         </figure>
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box"> <img class="img-front" src="img/Delantera Zip.png"> <img class="img-back"
-                        src="img/Trasera zip.png"> </div>
+                <div class="product-img-box">
+                    <img class="img-front" src="img/DelanteraZip.png" alt="chaqueta">
+                    <img class="img-back" src="img/TraseraZip.png" alt="chaqueta trasera">
+                </div>
             </div>
             <figcaption>
                 <p>LUVCLUB ZIP navy blue</p>
@@ -65,11 +83,12 @@
     <div class="productos">
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box"> <img class="img-front"
-                        src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg"> <video autoplay
-                        muted loop playsinline>
+                <div class="product-img-box">
+                    <img class="img-front" src="img/gemini-2.5-flash-image_quitale_los_logos_pero_mantenla_igual-0.jpg" alt="camiseta basica">
+                    <video autoplay muted loop playsinline>
                         <source src="img/0115.mp4" type="video/mp4">
-                    </video> </div>
+                    </video>
+                </div>
             </div>
             <figcaption>
                 <p>Basic tee unisex</p>
@@ -79,8 +98,10 @@
         </figure>
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box"> <img class="img-front" src="img/Parte delantera.png"> <img
-                        class="img-back" src="img/Parte Trasera.png"> </div>
+                <div class="product-img-box">
+                    <img class="img-front" src="img/NegraDelantera.png" alt="Parte delantera">
+                    <img class="img-back" src="img/NegraTrasera.png" alt="Parte trasera">
+                </div>
             </div>
             <figcaption>
                 <p>Heart broken T</p>
@@ -90,8 +111,10 @@
         </figure>
         <figure class="separacion">
             <div class="product-card">
-                <div class="product-img-box"> <img class="img-front" src="img/gorra roja delantera.png"> <img
-                        class="img-back" src="img/gorra roja lado.png"> </div>
+                <div class="product-img-box">
+                    <img class="img-front" src="img/GorraRojaDelantera.png" alt="gorra roja">
+                    <img class="img-back" src="img/GorraRojaLado.png" alt="gorra roja lado">
+                </div>
             </div>
             <figcaption>
                 <p>show wings cap</p>
@@ -133,6 +156,7 @@
                     comenzando.
                 </span>
                 <span class="texto-corto">Nuestra marca nació para expresar identidad y autenticidad.</span>
+            </figcaption>
         </figure>
     </aside>
     <br>
@@ -171,21 +195,20 @@
     <div class="carousel-auto">
         <div class="track">
             <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="elementos de la marca">
-            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting">
-            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="">
-            <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="">
-            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="">
-            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="">
-            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
-            <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="">
-            <img src="img/베이지 심플한 결혼 사진 폰배경화면-Photoroom.png" alt="shooting">
-            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="">
-            <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="">
-            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="">
-            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="">
-            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="">
+            <img src="img/Prendas.png" alt="fotoscarrusel">
+            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="fotoscarrusel">
+            <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="fotoscarrusel">
+            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="fotoscarrusel">
+            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="fotoscarrusel">
+            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="fotoscarrusel">
+            <img src="img/hjsz1yeq81xl97duzb4u.webp" alt="fotoscarrusel">
+            <img src="img/Prendas.png" alt="fotoscarrusel">
+            <img src="img/3e9739da7f19477bc5ea89a456e84309.jpg" alt="fotoscarrusel">
+            <img src="img/82e0f8d58763befb32b44777b37d59fd.jpg" alt="fotoscarrusel">
+            <img src="img/22c0a1be66e3212468227da2dab1c50d.jpg" alt="fotoscarrusel">
+            <img src="img/9a36672ee91a73bd8b1ffc640291e325.jpg" alt="fotoscarrusel">
+            <img src="img/8849ba5aa141129ae9daee85cf84bc20.jpg" alt="fotoscarrusel">
         </div>
-    </div>
     </div>
     <footer class="Final">
         <p class="divisionde1"><a href="PoliticaEnvios.html">Política de envíos</a></p>
@@ -196,6 +219,5 @@
             <a href="https://www.tiktok.com/@badluv_oficial?lang=es"><i class="fa-brands fa-tiktok"></i></a>
         </div>
     </footer>
-    <script> const btn = document.getElementById("menuBtn"); const menu = document.getElementById("menu"); btn.addEventListener("click", () => { menu.classList.toggle("show"); }); const historias = document.querySelectorAll(".historia-container"); const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("visible"); } }); }, { threshold: 0.25 }); historias.forEach(el => observer.observe(el)); </script>
-    </script>
+    <script src="javascript.js"></script>
 </body>

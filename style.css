@@ -12,9 +12,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     padding-top: 105px;
     background-color: rgba(239, 247, 250, 0.486);
@@ -24,7 +26,7 @@ body {
     animation: fadeInPage 1s ease forwards;
 }
 
-header{
+header {
     position: fixed;
 }
 
@@ -353,6 +355,54 @@ a {
 
 .texto-corto {
     display: none;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out, transform 6s ease-in-out;
+}
+
+/* Imagen visible */
+.slide.active {
+    opacity: 1;
+    transform: scale(1.08);
+    /* zoom suave */
+}
+
+/* Indicadores */
+.indicators {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.2);
 }
 
 /* Tablets */
